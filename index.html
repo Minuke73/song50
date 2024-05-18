@@ -20,9 +20,6 @@
 	left:0;right:0;
 	top:0;bottom:0;
   }
-	      canvas {
-	-webkit-tap-highlight-color: transparent;
-}
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
@@ -592,7 +589,7 @@ if (reversed == null) { reversed = false; }
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-545,39.9,70,70);
 // stage content:
-(lib._4학년_4_70p_빗자루여행_20240331 = function(mode,startPosition,loop,reversed) {
+(lib._4학년_4_70p_빗자루여행_20240517 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -602,15 +599,13 @@ if (reversed == null) { reversed = false; }
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
-	this.actionFrames = [0,1234,1235,1236,1248,1249,1250,1262,3578,3579,3580,4812];
-	this.streamSoundSymbolsList[0] = [{id:"stos_student",startFrame:0,endFrame:1237,loop:1,offset:0}];
+	this.actionFrames = [0,9,1234,1235,1236,1248,1249,1250,1262,3578,3579,3580,3589,4812];
+	this.streamSoundSymbolsList[9] = [{id:"stos_student",startFrame:9,endFrame:1237,loop:1,offset:0}];
 	this.streamSoundSymbolsList[1262] = [{id:"stos_singtosong",startFrame:1262,endFrame:3580,loop:1,offset:0}];
-	this.streamSoundSymbolsList[3580] = [{id:"stos_music",startFrame:3580,endFrame:4813,loop:1,offset:0}];
+	this.streamSoundSymbolsList[3589] = [{id:"stos_music",startFrame:3589,endFrame:4813,loop:1,offset:0}];
 	// timeline functions:
 	this.frame_0 = function() {
 		this.clearAllSoundStreams();
-		var soundInstance = playSound("stos_student",0);
-		this.InsertIntoSoundStreamData(soundInstance,0,1237,1);
 		this.stop();
 		var _this = this;
 		/*메뉴 네비게이션*/
@@ -656,6 +651,10 @@ if (reversed == null) { reversed = false; }
 			_this.play_btn.visible = true;
 		});
 	}
+	this.frame_9 = function() {
+		var soundInstance = playSound("stos_student",0);
+		this.InsertIntoSoundStreamData(soundInstance,9,1237,1);
+	}
 	this.frame_1234 = function() {
 		this.gotoAndStop('노래듣기');
 		this.play_btn.visible = true;
@@ -691,16 +690,18 @@ if (reversed == null) { reversed = false; }
 		this.play_btn.visible = true;
 	}
 	this.frame_3580 = function() {
-		var soundInstance = playSound("stos_music",0);
-		this.InsertIntoSoundStreamData(soundInstance,3580,4813,1);
 		this.stop();
+	}
+	this.frame_3589 = function() {
+		var soundInstance = playSound("stos_music",0);
+		this.InsertIntoSoundStreamData(soundInstance,3589,4813,1);
 	}
 	this.frame_4812 = function() {
 		this.gotoAndStop('반주듣기');
 		this.play_btn.visible = true;
 	}
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1234).call(this.frame_1234).wait(1).call(this.frame_1235).wait(1).call(this.frame_1236).wait(12).call(this.frame_1248).wait(1).call(this.frame_1249).wait(1).call(this.frame_1250).wait(12).call(this.frame_1262).wait(2316).call(this.frame_3578).wait(1).call(this.frame_3579).wait(1).call(this.frame_3580).wait(1232).call(this.frame_4812).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(9).call(this.frame_9).wait(1225).call(this.frame_1234).wait(1).call(this.frame_1235).wait(1).call(this.frame_1236).wait(12).call(this.frame_1248).wait(1).call(this.frame_1249).wait(1).call(this.frame_1250).wait(12).call(this.frame_1262).wait(2316).call(this.frame_3578).wait(1).call(this.frame_3579).wait(1).call(this.frame_3580).wait(9).call(this.frame_3589).wait(1223).call(this.frame_4812).wait(1));
 	// chapter_no
 	this.instance = new lib.main_no("single",15);
 	this.instance.setTransform(55.55,75.25,1,1,0,0,0,30.4,30.4);
@@ -5089,7 +5090,7 @@ function handleComplete(evt,comp) {
 	var preloaderDiv = document.getElementById("_preload_div_");
 	preloaderDiv.style.display = 'none';
 	canvas.style.display = 'block';
-	exportRoot = new lib._4학년_4_70p_빗자루여행_20240331();
+	exportRoot = new lib._4학년_4_70p_빗자루여행_20240517();
 	stage = new lib.Stage(canvas);
 	stage.enableMouseOver();	
 	//Registers the "tick" event listener.
